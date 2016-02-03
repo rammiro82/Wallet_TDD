@@ -17,9 +17,19 @@
 
 -(void) testMultiplication{
     RGSEuro *euro = [[RGSEuro alloc] initWithAmount:5];
-    [euro times:2];
+    RGSEuro *ten = [[RGSEuro alloc] initWithAmount:10];
+    RGSEuro *total = [euro times:2];
     
-    XCTAssertEqual(euro.amount, 10, @"5*2 should be 10");
+    XCTAssertEqualObjects(total, ten, @"€5 * 2 should be €10");
+}
+
+
+-(void) testEquality{
+    RGSEuro *five = [[RGSEuro alloc] initWithAmount:5];
+    RGSEuro *ten = [[RGSEuro alloc] initWithAmount:10];
+    RGSEuro *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total, @"equivalent objects should be equals");
 }
 
 - (void)testPerformanceExample {

@@ -24,7 +24,16 @@
     return self;
 }
 
--(void) times:(NSInteger) multiplier{
-    self.amount *= multiplier;
+-(RGSEuro*) times:(NSInteger) multiplier{
+    
+    RGSEuro *newEuro = [[RGSEuro alloc] initWithAmount:self.amount * multiplier];
+    
+    return newEuro;
+}
+
+
+#pragma mark - Overwritten
+-(BOOL) isEqual:(id)object{
+    return [self amount] == [object amount];
 }
 @end
