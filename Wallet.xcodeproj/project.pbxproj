@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28D24AEB1C62AE4300B169CC /* RGSEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AEA1C62AE4300B169CC /* RGSEuroTests.m */; };
+		28D24AEF1C62AF6C00B169CC /* RGSEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AEE1C62AF6C00B169CC /* RGSEuro.m */; };
+		28D24AF01C62B03D00B169CC /* RGSEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AEE1C62AF6C00B169CC /* RGSEuro.m */; };
 		28EB2D9D1C600BC800ABF325 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB2D9C1C600BC800ABF325 /* main.m */; };
 		28EB2DA01C600BC800ABF325 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB2D9F1C600BC800ABF325 /* AppDelegate.m */; };
 		28EB2DA21C600BC800ABF325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28EB2DA11C600BC800ABF325 /* Assets.xcassets */; };
 		28EB2DA51C600BC800ABF325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EB2DA31C600BC800ABF325 /* LaunchScreen.storyboard */; };
-		28EB2DB01C600BCB00ABF325 /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB2DAF1C600BCB00ABF325 /* WalletTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28D24AEA1C62AE4300B169CC /* RGSEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSEuroTests.m; sourceTree = "<group>"; };
+		28D24AED1C62AF6C00B169CC /* RGSEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSEuro.h; sourceTree = "<group>"; };
+		28D24AEE1C62AF6C00B169CC /* RGSEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSEuro.m; sourceTree = "<group>"; };
 		28EB2D981C600BC800ABF325 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EB2D9C1C600BC800ABF325 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28EB2D9E1C600BC800ABF325 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,7 +38,6 @@
 		28EB2DA41C600BC800ABF325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28EB2DA61C600BC800ABF325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28EB2DAB1C600BCB00ABF325 /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		28EB2DAF1C600BCB00ABF325 /* WalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletTests.m; sourceTree = "<group>"; };
 		28EB2DB11C600BCB00ABF325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D24AE91C62AE1D00B169CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28D24AEA1C62AE4300B169CC /* RGSEuroTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		28D24AEC1C62AF3600B169CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28D24AED1C62AF6C00B169CC /* RGSEuro.h */,
+				28D24AEE1C62AF6C00B169CC /* RGSEuro.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		28EB2D8F1C600BC800ABF325 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +97,7 @@
 		28EB2D9A1C600BC800ABF325 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				28D24AEC1C62AF3600B169CC /* Models */,
 				28EB2D9E1C600BC800ABF325 /* AppDelegate.h */,
 				28EB2D9F1C600BC800ABF325 /* AppDelegate.m */,
 				28EB2DA11C600BC800ABF325 /* Assets.xcassets */,
@@ -97,7 +119,7 @@
 		28EB2DAE1C600BCB00ABF325 /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				28EB2DAF1C600BCB00ABF325 /* WalletTests.m */,
+				28D24AE91C62AE1D00B169CC /* Models */,
 				28EB2DB11C600BCB00ABF325 /* Info.plist */,
 			);
 			path = WalletTests;
@@ -204,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D24AEF1C62AF6C00B169CC /* RGSEuro.m in Sources */,
 				28EB2DA01C600BC800ABF325 /* AppDelegate.m in Sources */,
 				28EB2D9D1C600BC800ABF325 /* main.m in Sources */,
 			);
@@ -213,7 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28EB2DB01C600BCB00ABF325 /* WalletTests.m in Sources */,
+				28D24AEB1C62AE4300B169CC /* RGSEuroTests.m in Sources */,
+				28D24AF01C62B03D00B169CC /* RGSEuro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +408,7 @@
 				28EB2DB61C600BCB00ABF325 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28EB2DB71C600BCB00ABF325 /* Build configuration list for PBXNativeTarget "WalletTests" */ = {
 			isa = XCConfigurationList;
@@ -392,6 +417,7 @@
 				28EB2DB91C600BCB00ABF325 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
