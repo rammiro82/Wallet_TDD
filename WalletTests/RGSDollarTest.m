@@ -22,4 +22,14 @@
     
     XCTAssertEqualObjects(ten, total, @"$5 * 2 = $10");
 }
+
+
+
+-(void) testEquality{
+    RGSDollar *five = [[RGSDollar alloc] initWithAmount:5];
+    RGSDollar *ten = [[RGSDollar alloc] initWithAmount:10];
+    RGSDollar *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total, @"equivalent objects should be equals");
+}
 @end
