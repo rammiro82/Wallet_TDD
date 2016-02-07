@@ -7,6 +7,8 @@
 //
 
 #import "RGSMoney.h"
+#import "NSObject+GNUStepAddons.h"
+
 @interface RGSMoney()
 
 @property (nonatomic) NSInteger amount;
@@ -23,6 +25,6 @@
 
 -(RGSMoney *) times:(NSInteger) multiplier{
     // no se debería llamar, sino que se deberia user el de la subclase
-    return self;
+    return [self subclassResponsibility:_cmd];
 }
 @end
