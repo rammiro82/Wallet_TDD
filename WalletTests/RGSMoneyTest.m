@@ -15,9 +15,5 @@
 
 @implementation RGSMoneyTest
 
--(void) testThatTimesRaisesException{
-    RGSMoney *money = [[RGSMoney alloc] initWithAmount: 1];
-    XCTAssertThrows([money times:2], @"Should raise an exception");
-}
 
 @end

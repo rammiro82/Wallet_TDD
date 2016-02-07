@@ -16,13 +16,6 @@
 
 @implementation RGSDollar
 
--(RGSDollar*) times:(NSInteger) multiplier{
-    
-    RGSDollar *newDollar = [[RGSDollar alloc] initWithAmount:[self.amount integerValue] * multiplier];
-    
-    return newDollar;
-}
-
 
 #pragma mark - Overwritten
 

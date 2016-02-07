@@ -16,13 +16,5 @@
 @implementation RGSEuro
 
 
--(RGSEuro*) times:(NSInteger) multiplier{
-    
-    RGSEuro *newEuro = [[RGSEuro alloc] initWithAmount:[self.amount integerValue] * multiplier];
-    
-    return newEuro;
-}
-
-
 #pragma mark - Overwritten
 @end

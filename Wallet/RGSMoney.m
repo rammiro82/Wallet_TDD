@@ -34,9 +34,11 @@
     return self;
 }
 
--(RGSMoney *) times:(NSInteger) multiplier{
-    // no se debería llamar, sino que se deberia user el de la subclase
-    return [self subclassResponsibility:_cmd];
+-(id) times:(NSInteger) multiplier{
+    
+    RGSMoney *newMoney = [[RGSMoney alloc] initWithAmount:[self.amount integerValue] * multiplier];
+    
+    return newMoney;
 }
 
 
