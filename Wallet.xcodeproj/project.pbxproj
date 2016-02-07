@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28D24AEB1C62AE4300B169CC /* RGSEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AEA1C62AE4300B169CC /* RGSEuroTests.m */; };
-		28D24AEF1C62AF6C00B169CC /* RGSEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AEE1C62AF6C00B169CC /* RGSEuro.m */; };
-		28D24AF01C62B03D00B169CC /* RGSEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AEE1C62AF6C00B169CC /* RGSEuro.m */; };
-		28D24AF21C63EA9400B169CC /* RGSDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF11C63EA9400B169CC /* RGSDollarTest.m */; };
-		28D24AF51C63EBA500B169CC /* RGSDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF41C63EBA500B169CC /* RGSDollar.m */; };
-		28D24AF61C63EBAD00B169CC /* RGSDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF41C63EBA500B169CC /* RGSDollar.m */; };
 		28D24AF91C63EE1B00B169CC /* RGSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF81C63EE1B00B169CC /* RGSMoney.m */; };
 		28D24AFA1C63EE1B00B169CC /* RGSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF81C63EE1B00B169CC /* RGSMoney.m */; };
 		28D24AFE1C67DDA900B169CC /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AFD1C67DDA900B169CC /* NSObject+GNUStepAddons.m */; };
@@ -35,18 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		28D24AEA1C62AE4300B169CC /* RGSEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSEuroTests.m; sourceTree = "<group>"; };
-		28D24AED1C62AF6C00B169CC /* RGSEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSEuro.h; sourceTree = "<group>"; };
-		28D24AEE1C62AF6C00B169CC /* RGSEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSEuro.m; sourceTree = "<group>"; };
-		28D24AF11C63EA9400B169CC /* RGSDollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSDollarTest.m; sourceTree = "<group>"; };
-		28D24AF31C63EBA500B169CC /* RGSDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSDollar.h; sourceTree = "<group>"; };
-		28D24AF41C63EBA500B169CC /* RGSDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSDollar.m; sourceTree = "<group>"; };
 		28D24AF71C63EE1B00B169CC /* RGSMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSMoney.h; sourceTree = "<group>"; };
 		28D24AF81C63EE1B00B169CC /* RGSMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSMoney.m; sourceTree = "<group>"; };
 		28D24AFC1C67DDA900B169CC /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		28D24AFD1C67DDA900B169CC /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		28D24B041C67E0B500B169CC /* RGSMoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSMoneyTest.m; sourceTree = "<group>"; };
-		28D24B071C67EA9900B169CC /* RGSMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RGSMoney-Private.h"; sourceTree = "<group>"; };
 		28EB2D981C600BC800ABF325 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EB2D9C1C600BC800ABF325 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28EB2D9E1C600BC800ABF325 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,8 +66,6 @@
 		28D24AE91C62AE1D00B169CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				28D24AEA1C62AE4300B169CC /* RGSEuroTests.m */,
-				28D24AF11C63EA9400B169CC /* RGSDollarTest.m */,
 				28D24B041C67E0B500B169CC /* RGSMoneyTest.m */,
 			);
 			name = Models;
@@ -89,13 +74,8 @@
 		28D24AEC1C62AF3600B169CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				28D24AED1C62AF6C00B169CC /* RGSEuro.h */,
-				28D24AEE1C62AF6C00B169CC /* RGSEuro.m */,
-				28D24AF31C63EBA500B169CC /* RGSDollar.h */,
-				28D24AF41C63EBA500B169CC /* RGSDollar.m */,
 				28D24AF71C63EE1B00B169CC /* RGSMoney.h */,
 				28D24AF81C63EE1B00B169CC /* RGSMoney.m */,
-				28D24B071C67EA9900B169CC /* RGSMoney-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -261,8 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D24AF91C63EE1B00B169CC /* RGSMoney.m in Sources */,
-				28D24AF51C63EBA500B169CC /* RGSDollar.m in Sources */,
-				28D24AEF1C62AF6C00B169CC /* RGSEuro.m in Sources */,
 				28D24AFE1C67DDA900B169CC /* NSObject+GNUStepAddons.m in Sources */,
 				28EB2DA01C600BC800ABF325 /* AppDelegate.m in Sources */,
 				28EB2D9D1C600BC800ABF325 /* main.m in Sources */,
@@ -275,11 +253,7 @@
 			files = (
 				28D24AFA1C63EE1B00B169CC /* RGSMoney.m in Sources */,
 				28D24B061C67E0B500B169CC /* RGSMoneyTest.m in Sources */,
-				28D24AF61C63EBAD00B169CC /* RGSDollar.m in Sources */,
-				28D24AF21C63EA9400B169CC /* RGSDollarTest.m in Sources */,
 				28D24AFF1C67DDA900B169CC /* NSObject+GNUStepAddons.m in Sources */,
-				28D24AEB1C62AE4300B169CC /* RGSEuroTests.m in Sources */,
-				28D24AF01C62B03D00B169CC /* RGSEuro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

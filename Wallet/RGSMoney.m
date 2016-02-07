@@ -8,12 +8,10 @@
 
 #import "RGSMoney.h"
 #import "NSObject+GNUStepAddons.h"
-#import "RGSMoney-Private.h"
-#import "RGSEuro.h"
-#import "RGSDollar.h"
 
 @interface RGSMoney()
 
+@property (nonatomic, strong) NSNumber *amount;
 
 @end
 @implementation RGSMoney
