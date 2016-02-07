@@ -11,7 +11,6 @@
 
 @interface RGSEuro : RGSMoney
 
--(id) initWithAmount:(NSInteger) amount;
 
 -(RGSEuro*) times:(NSInteger) multiplier;
 @end

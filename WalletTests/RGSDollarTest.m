@@ -31,6 +31,7 @@
     RGSDollar *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total, @"equivalent objects should be equals");
+    XCTAssertFalse([total isEqual:five], @"Non equivalent objects shoul not be equal");
 }
 
 
