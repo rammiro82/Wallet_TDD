@@ -1,5 +1,5 @@
 //
-//  RGSDollar.h
+//  RGSMoney.h
 //  Wallet
 //
 //  Created by Ramiro García Salazar on 4/2/16.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RGSMoney.h"
 
-@interface RGSDollar : RGSMoney
+@interface RGSMoney : NSObject
 
--(id) initWithAmount:(NSInteger) amount;
+-(id) initWithAmount:(NSInteger)amount;
 
--(RGSDollar*) times:(NSInteger) multiplier;
+-(RGSMoney *) times:(NSInteger) multiplier;
+
 @end

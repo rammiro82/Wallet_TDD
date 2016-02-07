@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RGSMoney.h"
 
-@interface RGSEuro : NSObject
+@interface RGSEuro : RGSMoney
 
 -(id) initWithAmount:(NSInteger) amount;
 

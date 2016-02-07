@@ -13,6 +13,8 @@
 		28D24AF21C63EA9400B169CC /* RGSDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF11C63EA9400B169CC /* RGSDollarTest.m */; };
 		28D24AF51C63EBA500B169CC /* RGSDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF41C63EBA500B169CC /* RGSDollar.m */; };
 		28D24AF61C63EBAD00B169CC /* RGSDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF41C63EBA500B169CC /* RGSDollar.m */; };
+		28D24AF91C63EE1B00B169CC /* RGSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF81C63EE1B00B169CC /* RGSMoney.m */; };
+		28D24AFA1C63EE1B00B169CC /* RGSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D24AF81C63EE1B00B169CC /* RGSMoney.m */; };
 		28EB2D9D1C600BC800ABF325 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB2D9C1C600BC800ABF325 /* main.m */; };
 		28EB2DA01C600BC800ABF325 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB2D9F1C600BC800ABF325 /* AppDelegate.m */; };
 		28EB2DA21C600BC800ABF325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28EB2DA11C600BC800ABF325 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		28D24AF11C63EA9400B169CC /* RGSDollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSDollarTest.m; sourceTree = "<group>"; };
 		28D24AF31C63EBA500B169CC /* RGSDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSDollar.h; sourceTree = "<group>"; };
 		28D24AF41C63EBA500B169CC /* RGSDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSDollar.m; sourceTree = "<group>"; };
+		28D24AF71C63EE1B00B169CC /* RGSMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSMoney.h; sourceTree = "<group>"; };
+		28D24AF81C63EE1B00B169CC /* RGSMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSMoney.m; sourceTree = "<group>"; };
 		28EB2D981C600BC800ABF325 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EB2D9C1C600BC800ABF325 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28EB2D9E1C600BC800ABF325 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				28D24AEE1C62AF6C00B169CC /* RGSEuro.m */,
 				28D24AF31C63EBA500B169CC /* RGSDollar.h */,
 				28D24AF41C63EBA500B169CC /* RGSDollar.m */,
+				28D24AF71C63EE1B00B169CC /* RGSMoney.h */,
+				28D24AF81C63EE1B00B169CC /* RGSMoney.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D24AF91C63EE1B00B169CC /* RGSMoney.m in Sources */,
 				28D24AF51C63EBA500B169CC /* RGSDollar.m in Sources */,
 				28D24AEF1C62AF6C00B169CC /* RGSEuro.m in Sources */,
 				28EB2DA01C600BC800ABF325 /* AppDelegate.m in Sources */,
@@ -246,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D24AFA1C63EE1B00B169CC /* RGSMoney.m in Sources */,
 				28D24AF61C63EBAD00B169CC /* RGSDollar.m in Sources */,
 				28D24AF21C63EA9400B169CC /* RGSDollarTest.m in Sources */,
 				28D24AEB1C62AE4300B169CC /* RGSEuroTests.m in Sources */,
