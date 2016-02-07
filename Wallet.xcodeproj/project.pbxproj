@@ -46,6 +46,7 @@
 		28D24AFC1C67DDA900B169CC /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		28D24AFD1C67DDA900B169CC /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		28D24B041C67E0B500B169CC /* RGSMoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSMoneyTest.m; sourceTree = "<group>"; };
+		28D24B071C67EA9900B169CC /* RGSMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RGSMoney-Private.h"; sourceTree = "<group>"; };
 		28EB2D981C600BC800ABF325 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EB2D9C1C600BC800ABF325 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28EB2D9E1C600BC800ABF325 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 				28D24AF41C63EBA500B169CC /* RGSDollar.m */,
 				28D24AF71C63EE1B00B169CC /* RGSMoney.h */,
 				28D24AF81C63EE1B00B169CC /* RGSMoney.m */,
+				28D24B071C67EA9900B169CC /* RGSMoney-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";

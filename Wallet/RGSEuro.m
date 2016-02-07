@@ -7,10 +7,9 @@
 //
 
 #import "RGSEuro.h"
+#import "RGSMoney-Private.h"
 
 @interface RGSEuro ()
-
-@property (nonatomic) NSInteger amount;
 
 @end
 
@@ -19,7 +18,7 @@
 
 -(RGSEuro*) times:(NSInteger) multiplier{
     
-    RGSEuro *newEuro = [[RGSEuro alloc] initWithAmount:self.amount * multiplier];
+    RGSEuro *newEuro = [[RGSEuro alloc] initWithAmount:[self.amount integerValue] * multiplier];
     
     return newEuro;
 }

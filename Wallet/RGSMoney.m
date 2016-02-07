@@ -8,17 +8,17 @@
 
 #import "RGSMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "RGSMoney-Private.h"
 
 @interface RGSMoney()
 
-@property (nonatomic) NSInteger amount;
 
 @end
 @implementation RGSMoney
 
 -(id) initWithAmount:(NSInteger)amount{
     if (self = [super init]) {
-        _amount = amount;
+        _amount = @(amount);
     }
     return self;
 }

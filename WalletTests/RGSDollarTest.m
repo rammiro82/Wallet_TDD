@@ -41,4 +41,13 @@
     
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
 }
+
+-(void) testAmountStorage{
+    RGSDollar *dolar = [[RGSDollar alloc] initWithAmount:2];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    XCTAssertEqual(2, [[dolar performSelector:@selector(amount)]integerValue], @"The value retrivied should be same as the stored");
+#pragma clang diagnostic pop
+}
 @end
