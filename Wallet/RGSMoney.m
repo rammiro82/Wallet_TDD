@@ -27,4 +27,13 @@
     // no se debería llamar, sino que se deberia user el de la subclase
     return [self subclassResponsibility:_cmd];
 }
+
+
+#pragma mark - Overwritten
+
+-(NSString *) description{
+    return [NSString stringWithFormat:@"<%@ %ld",
+            [self class], (long)[self amount]];
+}
+
 @end

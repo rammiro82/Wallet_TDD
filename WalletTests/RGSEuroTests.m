@@ -32,4 +32,11 @@
     XCTAssertEqualObjects(ten, total, @"equivalent objects should be equals");
 }
 
+-(void) testHash{
+    RGSEuro *a = [[RGSEuro alloc] initWithAmount:2];
+    RGSEuro *b = [[RGSEuro alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+}
+
 @end
