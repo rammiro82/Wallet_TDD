@@ -20,23 +20,25 @@
 
 
 +(id) euroWithAmount:(NSInteger) amount{
-    return [[RGSEuro alloc] initWithAmount:amount];
+    return [[RGSMoney alloc] initWithAmount:amount currency:@"EUR"];
 }
 
 +(id) dollarWithAmount:(NSInteger) amount{
-    return [[RGSDollar alloc] initWithAmount:amount];
+    return [[RGSMoney alloc] initWithAmount:amount currency:@"USD"];
 }
 
--(id) initWithAmount:(NSInteger)amount{
+-(id) initWithAmount:(NSInteger)amount
+            currency:(NSString *) currency{
     if (self = [super init]) {
         _amount = @(amount);
+        _currency = currency;
     }
     return self;
 }
 
 -(id) times:(NSInteger) multiplier{
     
-    RGSMoney *newMoney = [[RGSMoney alloc] initWithAmount:[self.amount integerValue] * multiplier];
+    RGSMoney *newMoney = [[RGSMoney alloc] initWithAmount:[self.amount integerValue] * multiplier currency:self.currency];
     
     return newMoney;
 }

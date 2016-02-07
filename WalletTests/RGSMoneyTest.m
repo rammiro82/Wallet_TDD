@@ -15,5 +15,11 @@
 
 @implementation RGSMoneyTest
 
+-(void) testCurrencies{
+    XCTAssertEqualObjects(@"EUR", [[RGSMoney euroWithAmount:1] currency], @"The currency of euros should be eur.");
+    
+    XCTAssertEqualObjects(@"USD", [[RGSMoney dollarWithAmount:1] currency], @"The currency of $1 should be USD.");
+    
+}
 
 @end
