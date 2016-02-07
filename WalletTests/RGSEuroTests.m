@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "RGSEuro.h"
+#import "RGSMoney.h"
 
 @interface RGSEuroTests : XCTestCase
 
@@ -16,8 +17,8 @@
 @implementation RGSEuroTests
 
 -(void) testMultiplication{
-    RGSEuro *euro = [[RGSEuro alloc] initWithAmount:5];
-    RGSEuro *ten = [[RGSEuro alloc] initWithAmount:10];
+    RGSEuro *euro = [RGSMoney euroWithAmount:5];
+    RGSEuro *ten = [RGSMoney euroWithAmount:10];
     RGSEuro *total = [euro times:2];
     
     XCTAssertEqualObjects(total, ten, @"€5 * 2 should be €10");
@@ -25,22 +26,22 @@
 
 
 -(void) testEquality{
-    RGSEuro *five = [[RGSEuro alloc] initWithAmount:5];
-    RGSEuro *ten = [[RGSEuro alloc] initWithAmount:10];
+    RGSEuro *five = [RGSMoney euroWithAmount:5];
+    RGSEuro *ten = [RGSMoney euroWithAmount:10];
     RGSEuro *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total, @"equivalent objects should be equals");
 }
 
 -(void) testHash{
-    RGSEuro *a = [[RGSEuro alloc] initWithAmount:2];
-    RGSEuro *b = [[RGSEuro alloc] initWithAmount:2];
+    RGSEuro *a = [RGSMoney euroWithAmount:2];
+    RGSEuro *b = [RGSMoney euroWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
 }
 
 -(void) testAmountStorage{
-    RGSEuro *euro = [[RGSEuro alloc] initWithAmount:2];
+    RGSEuro *euro = [RGSMoney euroWithAmount:2];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"The value retrivied should be same as the stored");

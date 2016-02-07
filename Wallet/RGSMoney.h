@@ -10,6 +10,9 @@
 
 @interface RGSMoney : NSObject
 
++(id) euroWithAmount:(NSInteger) amount;
++(id) dollarWithAmount:(NSInteger) amount;
+
 -(id) initWithAmount:(NSInteger)amount;
 
 -(RGSMoney *) times:(NSInteger) multiplier;

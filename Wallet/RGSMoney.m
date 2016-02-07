@@ -9,12 +9,23 @@
 #import "RGSMoney.h"
 #import "NSObject+GNUStepAddons.h"
 #import "RGSMoney-Private.h"
+#import "RGSEuro.h"
+#import "RGSDollar.h"
 
 @interface RGSMoney()
 
 
 @end
 @implementation RGSMoney
+
+
++(id) euroWithAmount:(NSInteger) amount{
+    return [[RGSEuro alloc] initWithAmount:amount];
+}
+
++(id) dollarWithAmount:(NSInteger) amount{
+    return [[RGSDollar alloc] initWithAmount:amount];
+}
 
 -(id) initWithAmount:(NSInteger)amount{
     if (self = [super init]) {

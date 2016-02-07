@@ -16,9 +16,9 @@
 @implementation RGSDollarTest
 
 -(void) testMultiplication{
-    RGSDollar *five = [[RGSDollar alloc] initWithAmount: 5];
+    RGSDollar *five = [RGSMoney dollarWithAmount: 5];
     RGSDollar *total = [five times:2];
-    RGSDollar *ten = [[RGSDollar alloc] initWithAmount: 10];
+    RGSDollar *ten = [RGSMoney euroWithAmount: 10];
     
     XCTAssertEqualObjects(ten, total, @"$5 * 2 = $10");
 }
@@ -26,8 +26,8 @@
 
 
 -(void) testEquality{
-    RGSDollar *five = [[RGSDollar alloc] initWithAmount:5];
-    RGSDollar *ten = [[RGSDollar alloc] initWithAmount:10];
+    RGSDollar *five = [RGSMoney euroWithAmount:5];
+    RGSDollar *ten = [RGSMoney euroWithAmount:10];
     RGSDollar *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total, @"equivalent objects should be equals");
@@ -36,14 +36,14 @@
 
 
 -(void) testHash{
-    RGSDollar *a = [[RGSDollar alloc] initWithAmount:2];
-    RGSDollar *b = [[RGSDollar alloc] initWithAmount:2];
+    RGSDollar *a = [RGSMoney euroWithAmount:2];
+    RGSDollar *b = [RGSMoney euroWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
 }
 
 -(void) testAmountStorage{
-    RGSDollar *dolar = [[RGSDollar alloc] initWithAmount:2];
+    RGSDollar *dolar = [RGSMoney euroWithAmount:2];
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
