@@ -41,6 +41,15 @@
     return newMoney;
 }
 
+-(RGSMoney *) plus:(RGSMoney *) other{
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    
+    RGSMoney *total = [[RGSMoney alloc] initWithAmount:totalAmount
+                                              currency:self.currency];
+    
+    return total;
+}
+
 
 #pragma mark - Overwritten
 

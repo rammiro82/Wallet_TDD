@@ -15,6 +15,8 @@
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
+-(RGSMoney *) plus:(RGSMoney *) other;
+
 -(id) initWithAmount:(NSInteger)amount
             currency:(NSString *) currency;
 
