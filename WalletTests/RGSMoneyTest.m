@@ -33,6 +33,13 @@
     XCTAssertEqualObjects([RGSMoney dollarWithAmount:4], [[RGSMoney dollarWithAmount:2] times:2]);
 }
 
+-(void) testDifferentCurrencies{
+    RGSMoney *euro = [RGSMoney euroWithAmount:1];
+    RGSMoney *dollar = [RGSMoney dollarWithAmount:1];
+    
+    XCTAssertNotEqualObjects(euro, dollar, @"Different currencies should not be equal!");
+}
+
 -(void) testHash{
     RGSMoney *a = [RGSMoney euroWithAmount:2];
     RGSMoney *b = [RGSMoney euroWithAmount:2];
