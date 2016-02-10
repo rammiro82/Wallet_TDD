@@ -11,9 +11,13 @@
 
 @interface RGSBroker : NSObject
 
+@property (nonatomic, strong) NSMutableDictionary *rates;
+
 -(id<RGSMoney>) reduce:(RGSMoney*) money toCurrency:(NSString *) currency;
 -(void) addRate:(NSInteger) rate
    fromCurrency:(NSString*) fromCurrency
      toCurrency:(NSString*) toCurrency;
 
+-(NSString *) keyFromCurrency:(NSString *) fromCurrency
+                   toCurrency:(NSString *) toCurrency;
 @end

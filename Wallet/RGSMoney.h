@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RGSBroker.h"
 @class RGSMoney;
 
 @protocol RGSMoney <NSObject>
@@ -18,6 +19,8 @@
 
 -(id<RGSMoney>) plus:(RGSMoney *) other;
 
+-(id<RGSMoney>) reduceToCurrency:(NSString*) currency
+                      withBroker:(RGSBroker*) broker;
 
 @end
 

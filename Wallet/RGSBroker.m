@@ -10,7 +10,7 @@
 #import "RGSMoney.h"
 
 @interface RGSBroker()
-@property (nonatomic, strong) NSMutableDictionary *rates;
+
 @end
 
 @implementation RGSBroker
@@ -22,31 +22,14 @@
     return self;
 }
 
--(id<RGSMoney>) reduce:(RGSMoney*) money
+-(RGSMoney *) reduce:(id<RGSMoney>) money
           toCurrency:(NSString*) currency{
     
-    RGSMoney *result;
-    double rate = [[self.rates
-                    objectForKey:[self keyFromCurrency:money.currency
-                                            toCurrency:currency]] doubleValue];
+    // double dispacth
     
-    // comprobar que divisa origen y destino, sean las mismas
-    if ([money.currency isEqual:currency]) {
-        result = money;
-    }else if (rate == 0){
-        // no hay tasa de conversión --> exception
-        [NSException raise:@"NoConversionRateException"
-                    format:@"Must have a conversión from %@ to %@", money.currency, currency];
-    }else{
-        double rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
-                                                           toCurrency:currency]] doubleValue];
-        NSInteger newAmount = [money.amount integerValue] * rate;
-        
-        result = [[RGSMoney alloc] initWithAmount:newAmount
-                                         currency:currency];
+    return [money reduceToCurrency:currency
+                        withBroker:self];
 
-    }
-    return result;
     
 }
 

@@ -8,6 +8,7 @@
 
 #import "RGSMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "RGSBroker.h"
 
 @interface RGSMoney()
 
@@ -50,6 +51,32 @@
     return total;
 }
 
+
+-(id<RGSMoney>) reduceToCurrency:(NSString*) currency
+                      withBroker:(RGSBroker*) broker{
+    
+    RGSMoney *result;
+    double rate = [[broker.rates
+                    objectForKey:[broker keyFromCurrency:self.currency
+                                            toCurrency:currency]] doubleValue];
+    
+    // comprobar que divisa origen y destino, sean las mismas
+    if ([self.currency isEqual:currency]) {
+        result = self;
+    }else if (rate == 0){
+        // no hay tasa de conversión --> exception
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversión from %@ to %@", self.currency, currency];
+    }else{
+        
+        NSInteger newAmount = [self.amount integerValue] * rate;
+        
+        result = [[RGSMoney alloc] initWithAmount:newAmount
+                                         currency:currency];
+        
+    }
+    return result;
+}
 
 #pragma mark - Overwritten
 
