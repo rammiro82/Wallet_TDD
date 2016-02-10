@@ -12,6 +12,9 @@
 
 @interface RGSBrokerTest : XCTestCase
 
+@property (nonatomic, strong) RGSBroker *emptyBroker;
+@property (nonatomic, strong) RGSMoney *oneDollar;
+
 @end
 
 @implementation RGSBrokerTest
@@ -19,11 +22,16 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.emptyBroker = [RGSBroker new];
+    self.oneDollar = [RGSMoney dollarWithAmount:1];
+    
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    self.emptyBroker = nil;
+    self.oneDollar = nil;
 }
 
 - (void)testPerformanceExample {
@@ -34,12 +42,33 @@
 }
 
 -(void) testSimpleReduction{
-    RGSBroker *brokcer = [[RGSBroker alloc] init];
     
     RGSMoney *sum = [[RGSMoney dollarWithAmount:5] plus:[RGSMoney dollarWithAmount:5]];
-    RGSMoney *reduced = [broker reduced: sum toCurrency:@"USD"];
+    RGSMoney *reduced = [self.emptyBroker reduce: sum toCurrency:@"USD"];
     
     XCTAssertEqualObjects(sum, reduced, @"Conversion to same currency should be a NOP");
+}
+
+// $10 == €5 2:1
+-(void) testReduction{
+    [self.emptyBroker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    
+    RGSMoney *dollars = [RGSMoney dollarWithAmount:10];
+    RGSMoney *euros = [RGSMoney euroWithAmount:5];
+    
+    RGSMoney *converted = [self.emptyBroker reduce:dollars
+                              toCurrency:@"EUR"];
+    
+    XCTAssertEqualObjects(converted, euros, @"$10 == €5 2:1");
+}
+
+-(void) testThatNoRateRaisesException{
+    XCTAssertThrows([self.emptyBroker reduce:self.oneDollar toCurrency:@"EUR"], @"No rates should cause exception");
+}
+
+-(void) testThatNilConversionDoesNotChangeMoney{
+    
+    XCTAssertEqualObjects(self.oneDollar, [self.emptyBroker reduce:self.oneDollar toCurrency:@"USD"], @"A nil conversion should hafe no effect");
 }
 
 @end

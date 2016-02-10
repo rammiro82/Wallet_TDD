@@ -10,6 +10,7 @@
 
 @interface RGSMoney : NSObject
 
+@property (nonatomic, strong, readonly) NSNumber *amount;
 @property (nonatomic, readonly) NSString *currency;
 
 +(id) euroWithAmount:(NSInteger) amount;

@@ -12,5 +12,8 @@
 @interface RGSBroker : NSObject
 
 -(RGSMoney *) reduce:(RGSMoney*) money toCurrency:(NSString *) currency;
+-(void) addRate:(NSInteger) rate
+   fromCurrency:(NSString*) fromCurrency
+     toCurrency:(NSString*) toCurrency;
 
 @end

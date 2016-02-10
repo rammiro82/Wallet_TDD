@@ -71,7 +71,21 @@
 -(void) testSimpleAddition{
     XCTAssertEqualObjects([[RGSMoney dollarWithAmount:5] plus:
                               [RGSMoney dollarWithAmount:5]],
-                             [RGSMoney dollarWithAmount:10], @"$5 + $5 = $10");
+                             [RGSMoney dollarWithAmount:10],
+                          @"$5 + $5 = $10");
+}
+
+-(void) testThatHashIsAmount{
+    RGSMoney *one = [RGSMoney dollarWithAmount:1];
+    
+    XCTAssertEqual([one hash], 1, @"The hash must be the same as de amount");
+}
+
+-(void) testDescription{
+    RGSMoney *one = [RGSMoney dollarWithAmount:1];
+    NSString *desc = @"<RGSMoney: USD 1>";
+    
+    XCTAssertEqualObjects(desc, [one description], @"Description must match template.");
 }
 
 @end
