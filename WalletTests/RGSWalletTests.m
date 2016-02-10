@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "RGSMoney.h"
 #import "RGSBroker.h"
+#import "RGSWallet.h"
 
 @interface RGSWalletTests : XCTestCase
 

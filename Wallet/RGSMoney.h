@@ -7,20 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RGSMoney;
 
-@interface RGSMoney : NSObject
+@protocol RGSMoney <NSObject>
+
+-(id) initWithAmount:(NSInteger)amount
+            currency:(NSString *) currency;
+
+-(id<RGSMoney>) times:(NSInteger) multiplier;
+
+-(id<RGSMoney>) plus:(RGSMoney *) other;
+
+
+@end
+
+@interface RGSMoney : NSObject<RGSMoney>
 
 @property (nonatomic, strong, readonly) NSNumber *amount;
 @property (nonatomic, readonly) NSString *currency;
 
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
-
--(RGSMoney *) plus:(RGSMoney *) other;
-
--(id) initWithAmount:(NSInteger)amount
-            currency:(NSString *) currency;
-
--(id) times:(NSInteger) multiplier;
 
 @end

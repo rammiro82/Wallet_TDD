@@ -34,14 +34,14 @@
     return self;
 }
 
--(id) times:(NSInteger) multiplier{
+-(id<RGSMoney>) times:(NSInteger) multiplier{
     
     RGSMoney *newMoney = [[RGSMoney alloc] initWithAmount:[self.amount integerValue] * multiplier currency:self.currency];
     
     return newMoney;
 }
 
--(RGSMoney *) plus:(RGSMoney *) other{
+-(id<RGSMoney>) plus:(RGSMoney *) other{
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     
     RGSMoney *total = [[RGSMoney alloc] initWithAmount:totalAmount
