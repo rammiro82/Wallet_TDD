@@ -40,4 +40,15 @@
     self.moneys = newMoneys;
     return self;
 }
+
+-(id<RGSMoney>) reduceToCurrency:(NSString *)currency
+                      withBroker:(RGSBroker *)broker{
+    RGSMoney *result = [[RGSMoney alloc] initWithAmount:0 currency:currency];
+    
+    for (RGSMoney *each in self.moneys) {
+        result = [result plus:[each reduceToCurrency:currency withBroker:broker]];
+    }
+    
+    return result;
+}
 @end

@@ -22,7 +22,7 @@
     return self;
 }
 
--(RGSMoney *) reduce:(id<RGSMoney>) money
+-(id<RGSMoney>) reduce:(id<RGSMoney>) money
           toCurrency:(NSString*) currency{
     
     // double dispacth
