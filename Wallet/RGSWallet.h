@@ -16,4 +16,5 @@
 -(void) subscribeToMemoryWarning:(NSNotificationCenter *)nc;
 -(void) addMoney: (RGSMoney *) money;
 -(void) takeMoney:(RGSMoney *) money;
+-(NSInteger) moneysForCurrencyType:(NSInteger) currencyType;
 @end

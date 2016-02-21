@@ -9,6 +9,8 @@
 #import "RGSWalletTableViewController.h"
 #import "RGSWallet.h"
 
+static NSString *cellID = @"cellIdentifier";
+
 @interface RGSWalletTableViewController ()
 
 @property (nonatomic, strong) RGSWallet *wallet;
@@ -50,18 +52,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    if ([self.wallet countCurrencyTypes] == section) {
+        // si estamos en la última sección, la del TOTAL sólo tiene una celda
+        return 1;
+    }
+    return [self.wallet  moneysForCurrencyType:section] + 1;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // creamos la celda
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:cellID];
+    }
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

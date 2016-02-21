@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RGSWalletTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    RGSWallet *wallet = [[RGSWallet alloc] initWithAmount:2 currency:@"EUR"];
+    
+    RGSBroker *broker = [RGSBroker new];
+    [broker addRate:2
+       fromCurrency:@"EUR"
+         toCurrency:@"USD"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    RGSWalletTableViewController *vc = [[RGSWalletTableViewController alloc] initWithModel:wallet
+                                                                                    broker:broker];
     self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window setRootViewController:vc];

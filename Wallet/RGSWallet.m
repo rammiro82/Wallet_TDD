@@ -17,11 +17,20 @@
 
 @implementation RGSWallet
 
--(NSUInteger) countCurrencyTypes{
-    return [self.arrayCurrencyTypes count];
+-(id) initWithAmount:(NSInteger)amount currency:(NSString *)currency{
+    if (self = [super init]) {
+        RGSMoney *money = [[RGSMoney alloc] initWithAmount:amount currency:currency];
+        _moneys = [NSMutableArray array];
+        [_moneys addObject:money];
+    }
+    return self;
 }
 
--(NSMutableArray *) arrayCurrencyTypes{
+-(NSUInteger) countCurrencyTypes{
+    return [self.currecyTypesArray count];
+}
+
+-(NSMutableArray *) currecyTypesArray{
     NSMutableArray *currencyTypes = [NSMutableArray array];
     
     for (RGSMoney *each in self.moneys) {
@@ -34,13 +43,18 @@
     return currencyTypes;
 }
 
--(id) initWithAmount:(NSInteger)amount currency:(NSString *)currency{
-    if (self = [super init]) {
-        RGSMoney *money = [[RGSMoney alloc] initWithAmount:amount currency:currency];
-        _moneys = [NSMutableArray array];
-        [_moneys addObject:money];
+-(NSInteger) moneysForCurrencyType:(NSInteger) currencyType{
+    NSString *currency = [self.currecyTypesArray objectAtIndex:currencyType];
+    NSMutableArray *moneysForCurrency = [NSMutableArray array];
+    
+    for (RGSMoney *each in self.moneys) {
+        // contamos la cantidad de moneys que hay de una currency determinada.
+        if ([each.currency isEqualToString:currency]) {
+            [moneysForCurrency addObject:each];
+        }
     }
-    return self;
+    
+    return moneysForCurrency.count;
 }
 
 -(id<RGSMoney>) plus:(RGSMoney*) money{
@@ -73,7 +87,7 @@
 
 
 -(void) addMoney: (RGSMoney *) money{
-    
+    [self.moneys addObject:money];
 }
 
 -(void) takeMoney:(RGSMoney *) money{

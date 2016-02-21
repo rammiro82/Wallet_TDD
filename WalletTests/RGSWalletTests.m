@@ -27,13 +27,6 @@
     [super tearDown];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
 // €40 + $20 = $100 2:1
 -(void) testAdditionWithReduction{
     RGSBroker *broker = [RGSBroker new];
@@ -55,5 +48,12 @@
     [wallet plus:[RGSMoney dollarWithAmount:10]];
     
     XCTAssertEqual(2, [wallet countCurrencyTypes], @"Two different currency tipes (EUR and USD)");
+}
+
+-(void) testMoneysForCurrencyType{
+    // contamos la cantidad de monedas, para un tipo determinado.
+    RGSWallet *wallet = [[RGSWallet alloc] initWithAmount:1 currency:@"EUR"];
+    
+    XCTAssertEqual(1, [wallet  moneysForCurrencyType:0], @"Two different currency tipes (EUR and USD)");
 }
 @end
