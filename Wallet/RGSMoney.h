@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RGSBroker.h"
 @class RGSMoney;
+@class RGSBroker;
 
 @protocol RGSMoney <NSObject>
 
