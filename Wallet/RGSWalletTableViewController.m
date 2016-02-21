@@ -11,16 +11,18 @@
 
 @interface RGSWalletTableViewController ()
 
-@property (nonatomic, strong) RGSWallet *model;
+@property (nonatomic, strong) RGSWallet *wallet;
+@property (nonatomic, strong) RGSBroker *broker;
 
 @end
 
 @implementation RGSWalletTableViewController
 
 
--(id) initWithModel: (RGSWallet *) model{
+-(id) initWithModel: (RGSWallet *) wallet broker:(RGSBroker *)broker{
     if (self = [super initWithStyle:UITableViewStylePlain]) {
-        _model = model;
+        _wallet = wallet;
+        _broker = broker;
     }
     
     return self;
@@ -44,11 +46,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self.wallet countCurrencyTypes] + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.model count] + 1;
+    return 1;
 }
 
 /*

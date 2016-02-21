@@ -10,6 +10,7 @@
 #import "RGSSimpleViewController.h"
 #import "RGSWalletTableViewController.h"
 #import "RGSWallet.h"
+#import "RGSBroker.h"
 
 @interface RGSControllerTests : XCTestCase
 
@@ -19,6 +20,7 @@
 
 @property (nonatomic, strong) RGSWalletTableViewController *walletVC;
 @property (nonatomic, strong) RGSWallet *wallet;
+@property (nonatomic, strong) RGSBroker *broker;
 
 @end
 
@@ -38,7 +40,8 @@
     
     self.wallet = [[RGSWallet alloc] initWithAmount:1 currency:@"USD"];
     [self.wallet plus:[RGSMoney euroWithAmount:1]];
-    self.walletVC = [[RGSWalletTableViewController alloc] initWithModel:self.wallet];
+    self.walletVC = [[RGSWalletTableViewController alloc] initWithModel:self.wallet
+                                                                 broker:self.broker];
 }
 
 - (void)tearDown {
@@ -70,7 +73,7 @@
 
 -(void) testThatNumberOfCellsIsNumberOfMoneyPlusOne{
     
-    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1");
+    XCTAssertEqual([self.wallet countCurrencyTypes] + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1");
 }
 
 @end

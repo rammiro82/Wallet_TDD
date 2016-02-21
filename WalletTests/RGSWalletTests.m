@@ -48,4 +48,12 @@
                             toCurrency:@"USD"];
     XCTAssertEqualObjects(reduced, [RGSMoney dollarWithAmount:100], @"€40 + $20 = $100 2:1");
 }
+
+-(void) testCountCurrencyTypes{
+    //contamos el número de monedas que hay, para pintar las secciones de la tabla
+    RGSWallet *wallet = [[RGSWallet alloc] initWithAmount:1 currency:@"EUR"];
+    [wallet plus:[RGSMoney dollarWithAmount:10]];
+    
+    XCTAssertEqual(2, [wallet countCurrencyTypes], @"Two different currency tipes (EUR and USD)");
+}
 @end

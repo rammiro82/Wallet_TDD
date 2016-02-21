@@ -17,8 +17,21 @@
 
 @implementation RGSWallet
 
--(NSUInteger) count{
-    return [self.moneys count];
+-(NSUInteger) countCurrencyTypes{
+    return [self.arrayCurrencyTypes count];
+}
+
+-(NSMutableArray *) arrayCurrencyTypes{
+    NSMutableArray *currencyTypes = [NSMutableArray array];
+    
+    for (RGSMoney *each in self.moneys) {
+        // para cada importe en monedas, comprobamos si el tipo, la hemos introducido en el resultado.
+        if (![currencyTypes containsObject:each.currency]) {
+            [currencyTypes addObject:each.currency];
+        }
+    }
+    
+    return currencyTypes;
 }
 
 -(id) initWithAmount:(NSInteger)amount currency:(NSString *)currency{
@@ -56,6 +69,15 @@
     }
     
     return result;
+}
+
+
+-(void) addMoney: (RGSMoney *) money{
+    
+}
+
+-(void) takeMoney:(RGSMoney *) money{
+    
 }
 
 #pragma mark - Notifications

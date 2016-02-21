@@ -11,7 +11,9 @@
 
 @interface RGSWallet : NSObject<RGSMoney>
 
-@property (nonatomic, readonly) NSUInteger count;
+@property (nonatomic, readonly) NSUInteger countCurrencyTypes;
 
 -(void) subscribeToMemoryWarning:(NSNotificationCenter *)nc;
+-(void) addMoney: (RGSMoney *) money;
+-(void) takeMoney:(RGSMoney *) money;
 @end

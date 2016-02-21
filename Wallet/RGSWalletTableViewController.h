@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RGSWallet.h"
+#import "RGSBroker.h"
+
 @interface RGSWalletTableViewController : UITableViewController
 
--(id) initWithModel: (RGSWallet *) model;
+-(id) initWithModel: (RGSWallet *) wallet
+             broker: (RGSBroker *) broker;
 
 @end
