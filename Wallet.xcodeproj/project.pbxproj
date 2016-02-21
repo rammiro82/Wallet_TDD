@@ -12,6 +12,8 @@
 		280C528B1C7983E1008687B9 /* RGSSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52871C7983CF008687B9 /* RGSSimpleViewController.m */; };
 		280C528E1C798754008687B9 /* RGSControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C528D1C798754008687B9 /* RGSControllerTests.m */; };
 		280C52911C798BD3008687B9 /* RGSWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52901C798BD3008687B9 /* RGSWalletTableViewController.m */; };
+		280C52941C7990AF008687B9 /* RGSNotificationCenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52931C7990AF008687B9 /* RGSNotificationCenterTest.m */; };
+		280C52971C7992B4008687B9 /* RGSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52961C7992B4008687B9 /* RGSFakeNotificationCenter.m */; };
 		2818FCFA1C6AB855001209C8 /* RGSWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCF91C6AB855001209C8 /* RGSWalletTests.m */; };
 		2818FCFD1C6ABA77001209C8 /* RGSWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCFC1C6ABA77001209C8 /* RGSWallet.m */; };
 		2818FCFE1C6ABA77001209C8 /* RGSWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCFC1C6ABA77001209C8 /* RGSWallet.m */; };
@@ -46,6 +48,9 @@
 		280C528D1C798754008687B9 /* RGSControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSControllerTests.m; sourceTree = "<group>"; };
 		280C528F1C798BD3008687B9 /* RGSWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSWalletTableViewController.h; sourceTree = "<group>"; };
 		280C52901C798BD3008687B9 /* RGSWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWalletTableViewController.m; sourceTree = "<group>"; };
+		280C52931C7990AF008687B9 /* RGSNotificationCenterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSNotificationCenterTest.m; sourceTree = "<group>"; };
+		280C52951C7992B4008687B9 /* RGSFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSFakeNotificationCenter.h; sourceTree = "<group>"; };
+		280C52961C7992B4008687B9 /* RGSFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSFakeNotificationCenter.m; sourceTree = "<group>"; };
 		2818FCF91C6AB855001209C8 /* RGSWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWalletTests.m; sourceTree = "<group>"; };
 		2818FCFB1C6ABA77001209C8 /* RGSWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSWallet.h; sourceTree = "<group>"; };
 		2818FCFC1C6ABA77001209C8 /* RGSWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWallet.m; sourceTree = "<group>"; };
@@ -104,6 +109,16 @@
 				280C528D1C798754008687B9 /* RGSControllerTests.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		280C52921C799087008687B9 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				280C52931C7990AF008687B9 /* RGSNotificationCenterTest.m */,
+				280C52951C7992B4008687B9 /* RGSFakeNotificationCenter.h */,
+				280C52961C7992B4008687B9 /* RGSFakeNotificationCenter.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 		28D24AE91C62AE1D00B169CC /* Models */ = {
@@ -183,6 +198,7 @@
 		28EB2DAE1C600BCB00ABF325 /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				280C52921C799087008687B9 /* Singletons */,
 				280C528C1C798715008687B9 /* Controllers */,
 				28D24AE91C62AE1D00B169CC /* Models */,
 				28EB2DB11C600BCB00ABF325 /* Info.plist */,
@@ -308,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D24AFA1C63EE1B00B169CC /* RGSMoney.m in Sources */,
+				280C52971C7992B4008687B9 /* RGSFakeNotificationCenter.m in Sources */,
 				280C528B1C7983E1008687B9 /* RGSSimpleViewController.m in Sources */,
 				28D24B0F1C6A92D000B169CC /* RGSBroker.m in Sources */,
 				28D24B061C67E0B500B169CC /* RGSMoneyTest.m in Sources */,
@@ -315,6 +332,7 @@
 				28D24AFF1C67DDA900B169CC /* NSObject+GNUStepAddons.m in Sources */,
 				28D24B0B1C6A91C100B169CC /* RGSBrokerTest.m in Sources */,
 				2818FCFA1C6AB855001209C8 /* RGSWalletTests.m in Sources */,
+				280C52941C7990AF008687B9 /* RGSNotificationCenterTest.m in Sources */,
 				280C528E1C798754008687B9 /* RGSControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

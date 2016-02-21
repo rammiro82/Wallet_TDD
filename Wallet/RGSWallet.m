@@ -6,6 +6,7 @@
 //  Copyright © 2016 Ramiro García Salazar. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "RGSWallet.h"
 
 @interface RGSWallet()
@@ -55,5 +56,17 @@
     }
     
     return result;
+}
+
+#pragma mark - Notifications
+-(void) subscribeToMemoryWarning:(NSNotificationCenter *)nc{
+    [nc addObserver:self
+           selector:@selector(dumpToDisk:)
+               name:UIApplicationDidReceiveMemoryWarningNotification
+             object:nil];
+}
+
+-(void) dumpToDisk:(NSNotification *)notification{
+    //guarda las cosas en disco.
 }
 @end
