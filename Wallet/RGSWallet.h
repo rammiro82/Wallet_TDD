@@ -11,4 +11,6 @@
 
 @interface RGSWallet : NSObject<RGSMoney>
 
+@property (nonatomic, readonly) NSUInteger count;
+
 @end
