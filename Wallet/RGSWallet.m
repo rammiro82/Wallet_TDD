@@ -27,10 +27,10 @@
 }
 
 -(NSUInteger) countCurrencyTypes{
-    return [self.currecyTypesArray count];
+    return [self.currencyTypesArray count];
 }
 
--(NSMutableArray *) currecyTypesArray{
+-(NSMutableArray *) currencyTypesArray{
     NSMutableArray *currencyTypes = [NSMutableArray array];
     
     for (RGSMoney *each in self.moneys) {
@@ -43,8 +43,8 @@
     return currencyTypes;
 }
 
--(NSInteger) moneysForCurrencyType:(NSInteger) currencyType{
-    NSString *currency = [self.currecyTypesArray objectAtIndex:currencyType];
+-(NSInteger) countMoneysForCurrencyType:(NSInteger) currencyType{
+    NSString *currency = [self.currencyTypesArray objectAtIndex:currencyType];
     NSMutableArray *moneysForCurrency = [NSMutableArray array];
     
     for (RGSMoney *each in self.moneys) {

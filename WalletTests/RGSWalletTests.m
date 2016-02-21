@@ -50,10 +50,12 @@
     XCTAssertEqual(2, [wallet countCurrencyTypes], @"Two different currency tipes (EUR and USD)");
 }
 
--(void) testMoneysForCurrencyType{
+-(void) testCountMoneysForCurrencyType{
     // contamos la cantidad de monedas, para un tipo determinado.
     RGSWallet *wallet = [[RGSWallet alloc] initWithAmount:1 currency:@"EUR"];
     
-    XCTAssertEqual(1, [wallet  moneysForCurrencyType:0], @"Two different currency tipes (EUR and USD)");
+    XCTAssertEqual(1, [wallet  countMoneysForCurrencyType:0], @"Two different currency tipes (EUR and USD)");
 }
+
+//-(RGSMoney *) testMoneyForIndex:(NSInteger) index
 @end

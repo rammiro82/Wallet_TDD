@@ -19,6 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     RGSWallet *wallet = [[RGSWallet alloc] initWithAmount:2 currency:@"EUR"];
+    [wallet addMoney:[[RGSMoney alloc] initWithAmount:3
+                                             currency:@"USD"]];
+    [wallet addMoney:[[RGSMoney alloc] initWithAmount:7
+                                             currency:@"USD"]];
+    [wallet addMoney:[[RGSMoney alloc] initWithAmount:5
+                                             currency:@"USD"]];
     
     RGSBroker *broker = [RGSBroker new];
     [broker addRate:2
@@ -29,6 +35,8 @@
     
     RGSWalletTableViewController *vc = [[RGSWalletTableViewController alloc] initWithModel:wallet
                                                                                     broker:broker];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window setRootViewController:vc];

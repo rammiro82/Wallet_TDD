@@ -14,7 +14,10 @@
 @property (nonatomic, readonly) NSUInteger countCurrencyTypes;
 
 -(void) subscribeToMemoryWarning:(NSNotificationCenter *)nc;
+
 -(void) addMoney: (RGSMoney *) money;
 -(void) takeMoney:(RGSMoney *) money;
--(NSInteger) moneysForCurrencyType:(NSInteger) currencyType;
+
+-(NSInteger) countMoneysForCurrencyType:(NSInteger) currencyType;
+-(NSMutableArray *) currencyTypesArray;
 @end

@@ -38,7 +38,11 @@
     
     self.simpleVC.displayLabel = self.label;
     
+    //////////////////////////////////////////////////////////////////////////
+    
     self.wallet = [[RGSWallet alloc] initWithAmount:1 currency:@"USD"];
+    self.broker = [RGSBroker new];
+    
     [self.wallet plus:[RGSMoney euroWithAmount:1]];
     self.walletVC = [[RGSWalletTableViewController alloc] initWithModel:self.wallet
                                                                  broker:self.broker];
@@ -66,14 +70,19 @@
 }
 
 -(void) testThatTableHasOneSection{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    
-    XCTAssertEqual(sections, 1, @"There can only be one seciton");
+#pragma clang diagnostic pop
+    XCTAssertEqual(sections, [self.wallet countCurrencyTypes] +1, @"There can only be one seciton");
 }
 
 -(void) testThatNumberOfCellsIsNumberOfMoneyPlusOne{
     
-    XCTAssertEqual([self.wallet countCurrencyTypes] + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1");
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+    XCTAssertEqual([self.wallet countMoneysForCurrencyType:0] + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1");
+#pragma clang diagnostic pop
 }
 
 @end
