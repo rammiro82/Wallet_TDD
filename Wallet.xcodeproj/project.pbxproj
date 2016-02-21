@@ -11,6 +11,7 @@
 		280C528A1C7983CF008687B9 /* RGSSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280C52881C7983CF008687B9 /* RGSSimpleViewController.xib */; };
 		280C528B1C7983E1008687B9 /* RGSSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52871C7983CF008687B9 /* RGSSimpleViewController.m */; };
 		280C528E1C798754008687B9 /* RGSControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C528D1C798754008687B9 /* RGSControllerTests.m */; };
+		280C52911C798BD3008687B9 /* RGSWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52901C798BD3008687B9 /* RGSWalletTableViewController.m */; };
 		2818FCFA1C6AB855001209C8 /* RGSWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCF91C6AB855001209C8 /* RGSWalletTests.m */; };
 		2818FCFD1C6ABA77001209C8 /* RGSWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCFC1C6ABA77001209C8 /* RGSWallet.m */; };
 		2818FCFE1C6ABA77001209C8 /* RGSWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCFC1C6ABA77001209C8 /* RGSWallet.m */; };
@@ -43,6 +44,8 @@
 		280C52871C7983CF008687B9 /* RGSSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSSimpleViewController.m; sourceTree = "<group>"; };
 		280C52881C7983CF008687B9 /* RGSSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGSSimpleViewController.xib; sourceTree = "<group>"; };
 		280C528D1C798754008687B9 /* RGSControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSControllerTests.m; sourceTree = "<group>"; };
+		280C528F1C798BD3008687B9 /* RGSWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSWalletTableViewController.h; sourceTree = "<group>"; };
+		280C52901C798BD3008687B9 /* RGSWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWalletTableViewController.m; sourceTree = "<group>"; };
 		2818FCF91C6AB855001209C8 /* RGSWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWalletTests.m; sourceTree = "<group>"; };
 		2818FCFB1C6ABA77001209C8 /* RGSWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSWallet.h; sourceTree = "<group>"; };
 		2818FCFC1C6ABA77001209C8 /* RGSWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWallet.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				280C52861C7983CF008687B9 /* RGSSimpleViewController.h */,
 				280C52871C7983CF008687B9 /* RGSSimpleViewController.m */,
 				280C52881C7983CF008687B9 /* RGSSimpleViewController.xib */,
+				280C528F1C798BD3008687B9 /* RGSWalletTableViewController.h */,
+				280C52901C798BD3008687B9 /* RGSWalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				28D24AFE1C67DDA900B169CC /* NSObject+GNUStepAddons.m in Sources */,
 				280C52891C7983CF008687B9 /* RGSSimpleViewController.m in Sources */,
 				28EB2DA01C600BC800ABF325 /* AppDelegate.m in Sources */,
+				280C52911C798BD3008687B9 /* RGSWalletTableViewController.m in Sources */,
 				28EB2D9D1C600BC800ABF325 /* main.m in Sources */,
 				2818FCFD1C6ABA77001209C8 /* RGSWallet.m in Sources */,
 			);

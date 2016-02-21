@@ -8,12 +8,17 @@
 
 #import <XCTest/XCTest.h>
 #import "RGSSimpleViewController.h"
+#import "RGSWalletTableViewController.h"
+#import "RGSWallet.h"
 
 @interface RGSControllerTests : XCTestCase
 
 @property (nonatomic, strong) RGSSimpleViewController *simpleVC;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UILabel  *label;
+
+@property (nonatomic, strong) RGSWalletTableViewController *walletVC;
+@property (nonatomic, strong) RGSWallet *wallet;
 
 @end
 
@@ -30,6 +35,10 @@
     self.label = [[UILabel alloc] initWithFrame:CGRectZero];
     
     self.simpleVC.displayLabel = self.label;
+    
+    self.wallet = [[RGSWallet alloc] initWithAmount:1 currency:@"USD"];
+    [self.wallet plus:[RGSMoney euroWithAmount:1]];
+    self.walletVC = [[RGSWalletTableViewController alloc] initWithModel:self.wallet];
 }
 
 - (void)tearDown {
@@ -51,6 +60,16 @@
     
     //comprobamos que tienen el mismo texto
     XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text, @"Button and label should have the same text");
+}
+
+-(void) testThatTableHasOneSection{
+    NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+    
+    XCTAssertEqual(sections, 1, @"There can only be one seciton");
+}
+
+-(void) testThatNumberOfCellsIsNumberOfMoneyPlusOne{
+    
 }
 
 @end
