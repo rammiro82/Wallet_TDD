@@ -15,6 +15,7 @@
 		280C52941C7990AF008687B9 /* RGSNotificationCenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52931C7990AF008687B9 /* RGSNotificationCenterTest.m */; };
 		280C52971C7992B4008687B9 /* RGSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 280C52961C7992B4008687B9 /* RGSFakeNotificationCenter.m */; };
 		280C529E1C7A8C72008687B9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 280C529D1C7A8C72008687B9 /* README.md */; };
+		280C52A01C7A8D08008687B9 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 280C529F1C7A8D08008687B9 /* .travis.yml */; };
 		2818FCFA1C6AB855001209C8 /* RGSWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCF91C6AB855001209C8 /* RGSWalletTests.m */; };
 		2818FCFD1C6ABA77001209C8 /* RGSWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCFC1C6ABA77001209C8 /* RGSWallet.m */; };
 		2818FCFE1C6ABA77001209C8 /* RGSWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2818FCFC1C6ABA77001209C8 /* RGSWallet.m */; };
@@ -53,6 +54,7 @@
 		280C52951C7992B4008687B9 /* RGSFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSFakeNotificationCenter.h; sourceTree = "<group>"; };
 		280C52961C7992B4008687B9 /* RGSFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSFakeNotificationCenter.m; sourceTree = "<group>"; };
 		280C529D1C7A8C72008687B9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		280C529F1C7A8D08008687B9 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		2818FCF91C6AB855001209C8 /* RGSWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWalletTests.m; sourceTree = "<group>"; };
 		2818FCFB1C6ABA77001209C8 /* RGSWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSWallet.h; sourceTree = "<group>"; };
 		2818FCFC1C6ABA77001209C8 /* RGSWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSWallet.m; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		28EB2D8F1C600BC800ABF325 = {
 			isa = PBXGroup;
 			children = (
+				280C529F1C7A8D08008687B9 /* .travis.yml */,
 				280C529D1C7A8C72008687B9 /* README.md */,
 				28EB2D9A1C600BC800ABF325 /* Wallet */,
 				28EB2DAE1C600BCB00ABF325 /* WalletTests */,
@@ -293,6 +296,7 @@
 			files = (
 				28EB2DA21C600BC800ABF325 /* Assets.xcassets in Resources */,
 				28EB2DA51C600BC800ABF325 /* LaunchScreen.storyboard in Resources */,
+				280C52A01C7A8D08008687B9 /* .travis.yml in Resources */,
 				280C528A1C7983CF008687B9 /* RGSSimpleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
