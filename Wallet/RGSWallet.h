@@ -19,5 +19,7 @@
 -(void) takeMoney:(RGSMoney *) money;
 
 -(NSInteger) countMoneysForCurrencyType:(NSInteger) currencyType;
+-(RGSMoney *) moneyForCurrency:(NSInteger) currency withIndex:(NSInteger) index;
+-(NSNumber *) sumAmountForCurrencyType:(NSInteger) currencyType;
 -(NSMutableArray *) currencyTypesArray;
 @end

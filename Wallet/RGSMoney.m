@@ -58,7 +58,7 @@
     RGSMoney *result;
     double rate = [[broker.rates
                     objectForKey:[broker keyFromCurrency:self.currency
-                                            toCurrency:currency]] doubleValue];
+                                              toCurrency:currency]] doubleValue];
     
     // comprobar que divisa origen y destino, sean las mismas
     if ([self.currency isEqual:currency]) {

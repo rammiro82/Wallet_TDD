@@ -43,7 +43,14 @@
     return currencyTypes;
 }
 
--(NSInteger) countMoneysForCurrencyType:(NSInteger) currencyType{
+-(NSNumber *) sumAmountForCurrencyType:(NSInteger) currencyType{
+    RGSMoney *suma = [[RGSMoney alloc] initWithAmount:0 currency:nil];
+    for (RGSMoney *each in [self moneysForCurrencyType:currencyType]) {
+        suma = [suma plus:each];
+    }
+    return suma.amount;
+}
+-(NSMutableArray *) moneysForCurrencyType:(NSInteger) currencyType{
     NSString *currency = [self.currencyTypesArray objectAtIndex:currencyType];
     NSMutableArray *moneysForCurrency = [NSMutableArray array];
     
@@ -54,7 +61,15 @@
         }
     }
     
-    return moneysForCurrency.count;
+    return moneysForCurrency;
+}
+
+-(NSInteger) countMoneysForCurrencyType:(NSInteger) currencyType{
+    return [[self moneysForCurrencyType:currencyType] count];
+}
+
+-(RGSMoney *) moneyForCurrency:(NSInteger)currency withIndex:(NSInteger)index{
+    return [[self moneysForCurrencyType:currency] objectAtIndex:index];
 }
 
 -(id<RGSMoney>) plus:(RGSMoney*) money{

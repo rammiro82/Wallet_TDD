@@ -69,10 +69,30 @@ static NSString *cellID = @"cellIdentifier";
     }
     
     RGSMoney *auxMoney;
+    NSString *auxLbl = @"Total:";
+    
+    if (indexPath.section == [self.wallet countCurrencyTypes]) {
+        // tenemos que contabilizar TODA la billetera
+        auxMoney = [self.wallet reduceToCurrency:@"EUR"
+                                      withBroker:self.broker];
+        auxLbl = [NSString stringWithFormat:@"%@ EUR", [auxMoney amount]];
+    }else{
+        // mostrar el total de la currency
+        if (indexPath.row == [self.wallet countMoneysForCurrencyType:indexPath.section]) {
+            auxLbl = [[self.wallet currencyTypesArray] objectAtIndex:indexPath.section];
+            auxLbl = [NSString stringWithFormat:@"Total %@: %@",
+                      auxLbl,
+                      [self.wallet sumAmountForCurrencyType:indexPath.section]];
+        }else{
+            // mostrar el importe de la moneda
+            auxMoney = [self.wallet moneyForCurrency:indexPath.section withIndex:indexPath.row];
+            auxLbl = [NSString stringWithFormat:@"%@ - %@", [auxMoney.amount stringValue], auxMoney.currency];
+        }
+    }
     
     // tenemos que pintar por cada sección, todas sus cantidades y su total
     // y al final, un total de todo lo demás.
-    cell.textLabel.text = @"test";
+    cell.textLabel.text = auxLbl;
     
     
     return cell;

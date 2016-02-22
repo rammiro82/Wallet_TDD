@@ -19,11 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     RGSWallet *wallet = [[RGSWallet alloc] initWithAmount:2 currency:@"EUR"];
-    [wallet addMoney:[[RGSMoney alloc] initWithAmount:3
+    [wallet addMoney:[[RGSMoney alloc] initWithAmount:2
                                              currency:@"USD"]];
-    [wallet addMoney:[[RGSMoney alloc] initWithAmount:7
+    [wallet addMoney:[[RGSMoney alloc] initWithAmount:8
                                              currency:@"USD"]];
-    [wallet addMoney:[[RGSMoney alloc] initWithAmount:5
+    [wallet addMoney:[[RGSMoney alloc] initWithAmount:6
                                              currency:@"USD"]];
     
     RGSBroker *broker = [RGSBroker new];
